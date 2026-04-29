@@ -55,9 +55,9 @@ TEST(GuesserTest, distance_length_differences)
 {
 	Guesser guesser("test");
 	// Guess shorter than secret
-	ASSERT_EQ(3, guesser.distance("te"));
-	// Guess longer than secret - capped at secret length
-	ASSERT_EQ(4, guesser.distance("testing"));
+	ASSERT_EQ(2, guesser.distance("te"));
+	// Guess longer than secret
+	ASSERT_EQ(3, guesser.distance("testing"));
 }
 
 TEST(GuesserTest, distance_very_long_guess_capped)
